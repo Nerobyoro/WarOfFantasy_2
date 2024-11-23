@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="halamantharok" size="1.000000 1.420875" />
+    <ImageTarget name="halamanseren" size="1.000000 1.420875" />
+    <ImageTarget name="halamankristal" size="1.000000 1.420875" />
+    <ImageTarget name="halamankaelen" size="1.000000 1.419712" />
+    <ImageTarget name="halamanallysia" size="1.000000 1.420192" />
+    <ImageTarget name="cover" size="1.000000 1.420394" />
+  </Tracking>
+</QCARConfig>

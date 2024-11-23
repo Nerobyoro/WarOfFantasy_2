@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="cardtharok" size="1.000000 1.374580" />
+    <ImageTarget name="cardspsayap" size="1.000000 1.378711" />
+    <ImageTarget name="cardspkipas" size="1.000000 1.377940" />
+    <ImageTarget name="cardspkapak" size="1.000000 1.377940" />
+    <ImageTarget name="cardspbuku" size="1.000000 1.378711" />
+    <ImageTarget name="cardseren" size="1.000000 1.378711" />
+    <ImageTarget name="cardkristal" size="1.000000 1.378151" />
+    <ImageTarget name="cardkaelen" size="1.000000 1.378711" />
+    <ImageTarget name="cardallysia" size="1.000000 1.378711" />
+  </Tracking>
+</QCARConfig>
