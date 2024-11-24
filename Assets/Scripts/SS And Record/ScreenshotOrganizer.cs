@@ -10,7 +10,12 @@ public class ScreenshotOrganizer : MonoBehaviour
     public Transform gridParent; // Parent object with a GridLayoutGroup
     public Text statusText;
 
+    public Canvas previewCanvas; // Canvas for previewing the clicked image
+    public RawImage previewImage; // RawImage in the preview canvas
+    public Button deleteButton; // Button for deleting the image
+
     private string screenshotFolderPath;
+    private string currentFilePath; // Path of the currently previewed image
 
     void Start()
     {
@@ -69,6 +74,49 @@ public class ScreenshotOrganizer : MonoBehaviour
         RawImage rawImage = newScreenshotDisplay.GetComponent<RawImage>();
         rawImage.texture = tex;
 
+        // Add click functionality to display the preview
+        Button button = newScreenshotDisplay.GetComponent<Button>();
+        if (button == null)
+        {
+            button = newScreenshotDisplay.AddComponent<Button>();
+        }
+        button.onClick.AddListener(() => ShowPreview(tex, filePath));
+
         yield return null;
+    }
+
+    public void ShowPreview(Texture2D imageTexture, string filePath)
+    {
+        if (previewCanvas != null && previewImage != null)
+        {
+            previewCanvas.gameObject.SetActive(true);
+            previewImage.texture = imageTexture;
+            currentFilePath = filePath; // Store the path of the currently previewed file
+        }
+    }
+
+    public void ClosePreview()
+    {
+        if (previewCanvas != null)
+        {
+            previewCanvas.gameObject.SetActive(false);
+            currentFilePath = null; // Clear the current file path
+        }
+    }
+
+    public void DeleteCurrentImage()
+    {
+        if (!string.IsNullOrEmpty(currentFilePath) && File.Exists(currentFilePath))
+        {
+            File.Delete(currentFilePath); // Delete the file
+            Debug.Log("Deleted file: " + currentFilePath);
+
+            ClosePreview(); // Close the preview
+            LoadScreenshots(); // Reload the gallery
+        }
+        else
+        {
+            Debug.LogWarning("No file to delete or file does not exist.");
+        }
     }
 }
