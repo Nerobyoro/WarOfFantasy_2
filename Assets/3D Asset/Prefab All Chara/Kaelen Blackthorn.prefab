@@ -734,7 +734,7 @@ GameObject:
   - component: {fileID: 3583501077603642930}
   - component: {fileID: 3826602352425818461}
   - component: {fileID: 5866391051277096309}
-  - component: {fileID: 543533862821948854}
+  - component: {fileID: 7829636773635771862}
   m_Layer: 0
   m_Name: Kaelen Blackthorn
   m_TagString: Untagged
@@ -752,8 +752,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3472172202343293398}
   - {fileID: 1608678572864421235}
@@ -828,32 +828,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!143 &543533862821948854
-CharacterController:
+--- !u!114 &7829636773635771862
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5245727349423323227}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 5.5
-  m_Radius: 1.3
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 2.7, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52fa6885420b6094aa98d731e4c20424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 3583501077603642930}
+  moveSpeed: 5
+  rotationSpeed: 100
+  TouchJoystickInput: 1
 --- !u!1 &5592559493393173420
 GameObject:
   m_ObjectHideFlags: 0
