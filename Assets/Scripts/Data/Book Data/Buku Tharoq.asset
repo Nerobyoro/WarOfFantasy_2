@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16af72cb85d042249aa37447b1563f20, type: 3}
   m_Name: Buku Tharoq
   m_EditorClassIdentifier: 
-  Title: wwwww
-  Cerita: adwadadawnjhdioajdiolpjaopidjpoajdpo[awjdopajdopawjdopajwdopjawopdjawopdjawopdjawopdjwakdao;jkaw;podjopawjdopawjdopwajdopawjdopawjdpojawpodjawopdjawopdjawopdjwaopdjawopdjwapodjawopdjawpojdopa;wjdopawjdopawjdopawjdpo
+  Title: The Man of Steel
+  Cerita: 'Di pegunungan bawah tanah, Tharok, seorang pandai besi, bekerja keras
+    di bengkel besinya, menciptakan senjata yang tak tertandingi dengan palu besar
+    di tangannya. Obsesi untuk membuat senjata terkuat membawanya mencari kristal
+    legendaris yang dapat meningkatkan kekuatannya. '
