@@ -10,7 +10,7 @@ public class ScreenshotOrganizer : MonoBehaviour
     public Transform gridParent; // Parent object with a GridLayoutGroup
     public Text statusText;
 
-    public Canvas previewCanvas; // Canvas for previewing the clicked image
+    public GameObject previewCanvas; // Canvas for previewing the clicked image
     public RawImage previewImage; // RawImage in the preview canvas
     public Button deleteButton; // Button for deleting the image
 
@@ -119,4 +119,47 @@ public class ScreenshotOrganizer : MonoBehaviour
             Debug.LogWarning("No file to delete or file does not exist.");
         }
     }
+    public void DeleteAllImages()
+    {
+        if (Directory.Exists(screenshotFolderPath))
+        {
+            string[] screenshotFiles = Directory.GetFiles(screenshotFolderPath, "*.png");
+
+            if (screenshotFiles.Length == 0)
+            {
+                Debug.LogWarning("No files to delete.");
+                if (statusText != null)
+                {
+                    statusText.text = "No files to delete.";
+                }
+                return;
+            }
+
+            foreach (string file in screenshotFiles)
+            {
+                File.Delete(file); // Delete the file
+                Debug.Log("Deleted file: " + file);
+            }
+
+            // After deleting all images, reload the gallery to reflect changes
+            LoadScreenshots();
+
+            if (statusText != null)
+            {
+                statusText.text = "All screenshots have been deleted.";
+            }
+
+            Debug.Log("All screenshots deleted.");
+        }
+        else
+        {
+            Debug.LogWarning("Screenshot folder does not exist.");
+            if (statusText != null)
+            {
+                statusText.text = "Screenshot folder does not exist.";
+            }
+        }
+    }
+
+
 }
