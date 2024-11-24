@@ -1742,7 +1742,7 @@ GameObject:
   - component: {fileID: 277263503}
   - component: {fileID: 277263502}
   - component: {fileID: 277263501}
-  - component: {fileID: 277263500}
+  - component: {fileID: 277263504}
   m_Layer: 0
   m_Name: Card Kristal
   m_TagString: Untagged
@@ -1750,25 +1750,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &277263500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 277263499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 277263502}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: cardkristal
-  mDatasetName: Vuforia/kartu-waroffantasy.xml
-  mCastedBehaviour: {fileID: 277263502}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &277263501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1839,7 +1820,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 277263500}
+  mPreview: {fileID: 277263504}
 --- !u!4 &277263503
 Transform:
   m_ObjectHideFlags: 0
@@ -1856,6 +1837,25 @@ Transform:
   - {fileID: 104748901}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &277263504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277263499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 277263502}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: cardkristal
+  mDatasetName: Vuforia/kartu-waroffantasy.xml
+  mCastedBehaviour: {fileID: 277263502}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &289350813
 GameObject:
   m_ObjectHideFlags: 0
@@ -3503,7 +3503,7 @@ GameObject:
   - component: {fileID: 578490681}
   - component: {fileID: 578490680}
   - component: {fileID: 578490679}
-  - component: {fileID: 578490678}
+  - component: {fileID: 578490682}
   m_Layer: 0
   m_Name: Buku Serenith
   m_TagString: Untagged
@@ -3511,25 +3511,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &578490678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 578490677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 578490680}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: halamanallysia
-  mDatasetName: Vuforia/halaman-waroffantasy.xml
-  mCastedBehaviour: {fileID: 578490680}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &578490679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3576,7 +3557,7 @@ MonoBehaviour:
         m_MethodName: CeritaAsal
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: c333724c73820f8479ddd749b474c30c,
+          m_ObjectArgument: {fileID: 11400000, guid: 4558435c929ac1347a6e2151e83b8da2,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: BookData, Assembly-CSharp
           m_IntArgument: 0
@@ -3614,18 +3595,18 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: halamanallysia
+  mTrackableName: halamanseren
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/halaman-waroffantasy.xml
-  mAspectRatio: 1.420192
+  mAspectRatio: 1.420875
   mImageTargetType: 0
   mWidth: 1
-  mHeight: 1.420192
+  mHeight: 1.420875
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 578490678}
+  mPreview: {fileID: 578490682}
 --- !u!4 &578490681
 Transform:
   m_ObjectHideFlags: 0
@@ -3642,6 +3623,25 @@ Transform:
   - {fileID: 488302417}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &578490682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578490677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 578490680}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: halamanseren
+  mDatasetName: Vuforia/halaman-waroffantasy.xml
+  mCastedBehaviour: {fileID: 578490680}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1001 &595201916
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4025,7 +4025,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 13151888}
+      - m_Target: {fileID: 1430154210}
         m_TargetAssemblyTypeName: CharacterController, Assembly-CSharp
         m_MethodName: SetTrigger
         m_Mode: 5
@@ -4244,7 +4244,7 @@ GameObject:
   - component: {fileID: 766595488}
   - component: {fileID: 766595487}
   - component: {fileID: 766595486}
-  - component: {fileID: 766595485}
+  - component: {fileID: 766595489}
   m_Layer: 0
   m_Name: Buku Tharoq
   m_TagString: Untagged
@@ -4252,25 +4252,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &766595485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 766595484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 766595487}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: halamanallysia
-  mDatasetName: Vuforia/halaman-waroffantasy.xml
-  mCastedBehaviour: {fileID: 766595487}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &766595486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4317,7 +4298,7 @@ MonoBehaviour:
         m_MethodName: CeritaAsal
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: c333724c73820f8479ddd749b474c30c,
+          m_ObjectArgument: {fileID: 11400000, guid: 4717752376df58c4a8de6c775bd2dade,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: BookData, Assembly-CSharp
           m_IntArgument: 0
@@ -4355,18 +4336,18 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: halamanallysia
+  mTrackableName: halamantharok
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/halaman-waroffantasy.xml
-  mAspectRatio: 1.420192
+  mAspectRatio: 1.420875
   mImageTargetType: 0
   mWidth: 1
-  mHeight: 1.420192
+  mHeight: 1.420875
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 766595485}
+  mPreview: {fileID: 766595489}
 --- !u!4 &766595488
 Transform:
   m_ObjectHideFlags: 0
@@ -4383,6 +4364,25 @@ Transform:
   - {fileID: 1866075287}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &766595489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766595484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 766595487}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: halamantharok
+  mDatasetName: Vuforia/halaman-waroffantasy.xml
+  mCastedBehaviour: {fileID: 766595487}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &780220854
 GameObject:
   m_ObjectHideFlags: 0
@@ -4699,7 +4699,7 @@ GameObject:
   - component: {fileID: 853341100}
   - component: {fileID: 853341099}
   - component: {fileID: 853341098}
-  - component: {fileID: 853341097}
+  - component: {fileID: 853341101}
   m_Layer: 0
   m_Name: Buku Kaelen
   m_TagString: Untagged
@@ -4707,25 +4707,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &853341097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 853341096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 853341099}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: halamanallysia
-  mDatasetName: Vuforia/halaman-waroffantasy.xml
-  mCastedBehaviour: {fileID: 853341099}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &853341098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4772,7 +4753,7 @@ MonoBehaviour:
         m_MethodName: CeritaAsal
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: c333724c73820f8479ddd749b474c30c,
+          m_ObjectArgument: {fileID: 11400000, guid: d5cf996d2839ee04a83c9a975c4daf5e,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: BookData, Assembly-CSharp
           m_IntArgument: 0
@@ -4810,18 +4791,18 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: halamanallysia
+  mTrackableName: halamankaelen
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/halaman-waroffantasy.xml
-  mAspectRatio: 1.420192
+  mAspectRatio: 1.419712
   mImageTargetType: 0
   mWidth: 1
-  mHeight: 1.420192
+  mHeight: 1.419712
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 853341097}
+  mPreview: {fileID: 853341101}
 --- !u!4 &853341100
 Transform:
   m_ObjectHideFlags: 0
@@ -4838,6 +4819,25 @@ Transform:
   - {fileID: 98672037}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &853341101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853341096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 853341099}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: halamankaelen
+  mDatasetName: Vuforia/halaman-waroffantasy.xml
+  mCastedBehaviour: {fileID: 853341099}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &856628561
 GameObject:
   m_ObjectHideFlags: 0
@@ -5087,7 +5087,7 @@ GameObject:
   - component: {fileID: 898529755}
   - component: {fileID: 898529754}
   - component: {fileID: 898529753}
-  - component: {fileID: 898529752}
+  - component: {fileID: 898529756}
   m_Layer: 0
   m_Name: Card Serenith
   m_TagString: Untagged
@@ -5095,25 +5095,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &898529752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 898529751}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 898529754}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: cardseren
-  mDatasetName: Vuforia/kartu-waroffantasy.xml
-  mCastedBehaviour: {fileID: 898529754}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &898529753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5233,7 +5214,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 898529752}
+  mPreview: {fileID: 898529756}
 --- !u!4 &898529755
 Transform:
   m_ObjectHideFlags: 0
@@ -5250,6 +5231,25 @@ Transform:
   - {fileID: 1430154208}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &898529756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898529751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 898529754}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: cardseren
+  mDatasetName: Vuforia/kartu-waroffantasy.xml
+  mCastedBehaviour: {fileID: 898529754}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &912809143
 GameObject:
   m_ObjectHideFlags: 0
@@ -5261,7 +5261,7 @@ GameObject:
   - component: {fileID: 912809147}
   - component: {fileID: 912809146}
   - component: {fileID: 912809145}
-  - component: {fileID: 912809144}
+  - component: {fileID: 912809148}
   m_Layer: 0
   m_Name: Card Tharoq
   m_TagString: Untagged
@@ -5269,25 +5269,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &912809144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 912809143}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 912809146}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: cardtharok
-  mDatasetName: Vuforia/kartu-waroffantasy.xml
-  mCastedBehaviour: {fileID: 912809146}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &912809145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5407,7 +5388,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 912809144}
+  mPreview: {fileID: 912809148}
 --- !u!4 &912809147
 Transform:
   m_ObjectHideFlags: 0
@@ -5424,6 +5405,25 @@ Transform:
   - {fileID: 711177728}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &912809148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912809143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 912809146}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: cardtharok
+  mDatasetName: Vuforia/kartu-waroffantasy.xml
+  mCastedBehaviour: {fileID: 912809146}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &931213518
 GameObject:
   m_ObjectHideFlags: 0
@@ -6255,7 +6255,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 13151888}
+      - m_Target: {fileID: 1430154210}
         m_TargetAssemblyTypeName: CharacterController, Assembly-CSharp
         m_MethodName: SetTrigger
         m_Mode: 5
@@ -6517,7 +6517,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8285138371439175166, guid: 9bb30758b7fc7d54184b75187b623345, type: 3}
+    - {fileID: 4128440008735351029, guid: 9bb30758b7fc7d54184b75187b623345, type: 3}
+    - {fileID: 2711749598916956407, guid: 9bb30758b7fc7d54184b75187b623345, type: 3}
+    - {fileID: 7321959970633673991, guid: 9bb30758b7fc7d54184b75187b623345, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -6738,7 +6742,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2155534950166964933, guid: 1634d38154617894ebd3508a9b27ee13, type: 3}
+    - {fileID: 4600417473592753700, guid: 1634d38154617894ebd3508a9b27ee13, type: 3}
+    - {fileID: 150116470951331942, guid: 1634d38154617894ebd3508a9b27ee13, type: 3}
+    - {fileID: 3606829422177199483, guid: 1634d38154617894ebd3508a9b27ee13, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -6976,7 +6984,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 13151888}
+      - m_Target: {fileID: 711177733}
         m_TargetAssemblyTypeName: CharacterController, Assembly-CSharp
         m_MethodName: SetTrigger
         m_Mode: 5
@@ -7488,7 +7496,7 @@ GameObject:
   - component: {fileID: 1315767954}
   - component: {fileID: 1315767953}
   - component: {fileID: 1315767952}
-  - component: {fileID: 1315767951}
+  - component: {fileID: 1315767955}
   m_Layer: 0
   m_Name: Card Kaelen
   m_TagString: Untagged
@@ -7496,25 +7504,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1315767951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1315767950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 1315767953}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: cardkaelen
-  mDatasetName: Vuforia/kartu-waroffantasy.xml
-  mCastedBehaviour: {fileID: 1315767953}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &1315767952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7569,7 +7558,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2066487497}
+      - m_Target: {fileID: 209766465}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -7634,7 +7623,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1315767951}
+  mPreview: {fileID: 1315767955}
 --- !u!4 &1315767954
 Transform:
   m_ObjectHideFlags: 0
@@ -7651,6 +7640,25 @@ Transform:
   - {fileID: 2108234185}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1315767955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315767950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1315767953}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: cardkaelen
+  mDatasetName: Vuforia/kartu-waroffantasy.xml
+  mCastedBehaviour: {fileID: 1315767953}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1001 &1331528129
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8148,7 +8156,7 @@ GameObject:
   - component: {fileID: 1503940410}
   - component: {fileID: 1503940409}
   - component: {fileID: 1503940408}
-  - component: {fileID: 1503940407}
+  - component: {fileID: 1503940411}
   m_Layer: 0
   m_Name: Buku Kristal
   m_TagString: Untagged
@@ -8156,25 +8164,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1503940407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1503940406}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 1503940409}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: halamanallysia
-  mDatasetName: Vuforia/halaman-waroffantasy.xml
-  mCastedBehaviour: {fileID: 1503940409}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &1503940408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8221,7 +8210,7 @@ MonoBehaviour:
         m_MethodName: CeritaAsal
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: c333724c73820f8479ddd749b474c30c,
+          m_ObjectArgument: {fileID: 11400000, guid: aefd880d23e89db4aa06cc14bda5dcd5,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: BookData, Assembly-CSharp
           m_IntArgument: 0
@@ -8259,18 +8248,18 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: halamanallysia
+  mTrackableName: halamankristal
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/halaman-waroffantasy.xml
-  mAspectRatio: 1.420192
+  mAspectRatio: 1.420875
   mImageTargetType: 0
   mWidth: 1
-  mHeight: 1.420192
+  mHeight: 1.420875
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1503940407}
+  mPreview: {fileID: 1503940411}
 --- !u!4 &1503940410
 Transform:
   m_ObjectHideFlags: 0
@@ -8287,6 +8276,25 @@ Transform:
   - {fileID: 1193970156}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1503940411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503940406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1503940409}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: halamankristal
+  mDatasetName: Vuforia/halaman-waroffantasy.xml
+  mCastedBehaviour: {fileID: 1503940409}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &1556480260
 GameObject:
   m_ObjectHideFlags: 0
@@ -8410,7 +8418,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 13151888}
+      - m_Target: {fileID: 2108234187}
         m_TargetAssemblyTypeName: CharacterController, Assembly-CSharp
         m_MethodName: SetTrigger
         m_Mode: 5
@@ -9636,7 +9644,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3826602352425818461, guid: 2c762ed1931b06446bc401998658a917, type: 3}
+    - {fileID: 5866391051277096309, guid: 2c762ed1931b06446bc401998658a917, type: 3}
+    - {fileID: 7829636773635771862, guid: 2c762ed1931b06446bc401998658a917, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -10281,9 +10292,7 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6426022267432600700, guid: df3556bdf1f7b7c4ab0cb7b6d250f9c2, type: 3}
-    - {fileID: 6664246777357698613, guid: df3556bdf1f7b7c4ab0cb7b6d250f9c2, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -10449,7 +10458,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 13151888}
+      - m_Target: {fileID: 2108234187}
         m_TargetAssemblyTypeName: CharacterController, Assembly-CSharp
         m_MethodName: SetTrigger
         m_Mode: 5
@@ -11791,7 +11800,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 13151888}
+      - m_Target: {fileID: 711177733}
         m_TargetAssemblyTypeName: CharacterController, Assembly-CSharp
         m_MethodName: SetTrigger
         m_Mode: 5
@@ -12324,7 +12333,7 @@ PrefabInstance:
     - target: {fileID: 6299163906020377371, guid: bffa877c0e1f0954e851ba0cb9c6fb53,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
