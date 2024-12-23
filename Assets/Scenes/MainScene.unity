@@ -5405,7 +5405,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &728572184
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6107,7 +6107,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2100852174}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ScreenshotOrganizer, Assembly-CSharp
         m_MethodName: DeleteCurrentImage
         m_Mode: 1
@@ -7755,33 +7755,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 169940375}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 2100852174}
-        m_TargetAssemblyTypeName: ScreenshotOrganizer, Assembly-CSharp
-        m_MethodName: LoadScreenshots
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1059214149}
-        m_TargetAssemblyTypeName: ScrollbarSizeLock, Assembly-CSharp
-        m_MethodName: SetScrollbarSize
+      - m_Target: {fileID: 2100852177}
+        m_TargetAssemblyTypeName: OpenGallery, Assembly-CSharp
+        m_MethodName: OpenGalleryApp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12712,7 +12688,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2100852174}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ScreenshotOrganizer, Assembly-CSharp
         m_MethodName: DeleteAllImages
         m_Mode: 1
@@ -17133,8 +17109,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2100852176}
   - component: {fileID: 2100852175}
-  - component: {fileID: 2100852174}
   - component: {fileID: 2100852173}
+  - component: {fileID: 2100852177}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -17163,25 +17139,6 @@ MonoBehaviour:
   ceritaAsal: {fileID: 800522936}
   infoButton: {fileID: 1621198853}
   info: {fileID: 1347053926}
---- !u!114 &2100852174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2100852172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 610c45c34a150664680ac7920b5ab62c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  screenshotDisplayPrefab: {fileID: 1726880363165626920, guid: bfac7e1b4e19a1748a7b61f8f8e25b4a,
-    type: 3}
-  gridParent: {fileID: 2075379577}
-  statusText: {fileID: 294576236}
-  previewCanvas: {fileID: 1865519351}
-  previewImage: {fileID: 182541127}
-  deleteButton: {fileID: 480528421}
 --- !u!114 &2100852175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17197,7 +17154,7 @@ MonoBehaviour:
   UiList:
   - {fileID: 182492871}
   - {fileID: 1476784235}
-  pathText: {fileID: 1884709019}
+  screenshotButton: {fileID: 0}
 --- !u!4 &2100852176
 Transform:
   m_ObjectHideFlags: 0
@@ -17213,6 +17170,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2100852177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100852172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0716a1bdc3747e4faac94972a2d8143, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2108234184
 PrefabInstance:
   m_ObjectHideFlags: 0
