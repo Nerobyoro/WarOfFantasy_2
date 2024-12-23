@@ -1,10 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
-using System.IO;
-using System.Collections.Generic;
 using System.Collections;
+using System.Collections.Generic;
 
-public class ScreenshotOrganizer : MonoBehaviour
+public class ScreenshotOrganizerWithGallery : MonoBehaviour
 {
     public GameObject screenshotDisplayPrefab; // Prefab containing a RawImage component
     public Transform gridParent; // Parent object with a GridLayoutGroup
@@ -12,31 +11,20 @@ public class ScreenshotOrganizer : MonoBehaviour
 
     public GameObject previewCanvas; // Canvas for previewing the clicked image
     public RawImage previewImage; // RawImage in the preview canvas
-    public Button deleteButton; // Button for deleting the image
 
-    private string screenshotFolderPath;
-    private string currentFilePath; // Path of the currently previewed image
+    private List<string> loadedFilePaths = new List<string>(); // Store file paths for loaded screenshots
 
     void Start()
     {
-        screenshotFolderPath = Path.Combine(Application.persistentDataPath, "Screenshots");
-
-        // Check if the screenshot folder exists
-        if (!Directory.Exists(screenshotFolderPath))
-        {
-            Directory.CreateDirectory(screenshotFolderPath);
-            Debug.Log("Screenshot folder created at: " + screenshotFolderPath);
-        }
-
         if (statusText != null)
         {
-            statusText.text = "Loading screenshots from: " + screenshotFolderPath;
+            statusText.text = "Loading screenshots from gallery...";
         }
 
-        LoadScreenshots();
+        LoadScreenshotsFromGallery();
     }
 
-    public void LoadScreenshots()
+    public void LoadScreenshotsFromGallery()
     {
         // Clear previous screenshots displayed
         foreach (Transform child in gridParent)
@@ -44,30 +32,53 @@ public class ScreenshotOrganizer : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        // Get all .png files in the screenshot folder
-        string[] screenshotFiles = Directory.GetFiles(screenshotFolderPath, "*.png");
+        loadedFilePaths.Clear();
 
-        if (screenshotFiles.Length == 0)
+        // Request images from gallery using NativeGallery
+        NativeGallery.Permission permission = NativeGallery.GetImagesFromGallery((filePaths) =>
         {
-            Debug.Log("No screenshots found in folder.");
+            if (filePaths != null && filePaths.Length > 0)
+            {
+                foreach (string filePath in filePaths)
+                {
+                    loadedFilePaths.Add(filePath);
+                    StartCoroutine(LoadScreenshot(filePath));
+                }
+
+                if (statusText != null)
+                {
+                    statusText.text = $"{filePaths.Length} screenshots loaded.";
+                }
+            }
+            else
+            {
+                if (statusText != null)
+                {
+                    statusText.text = "No screenshots found in gallery.";
+                }
+                Debug.LogWarning("No screenshots found.");
+            }
+        }, "Select screenshots", "image/png");
+
+        if (permission != NativeGallery.Permission.Granted)
+        {
+            Debug.LogWarning("Gallery access not granted.");
             if (statusText != null)
             {
-                statusText.text = "No screenshots found in folder.";
+                statusText.text = "Gallery access not granted.";
             }
-            return;
-        }
-
-        foreach (string screenshotFile in screenshotFiles)
-        {
-            StartCoroutine(LoadScreenshot(screenshotFile));
         }
     }
 
     private IEnumerator LoadScreenshot(string filePath)
     {
-        byte[] fileData = File.ReadAllBytes(filePath);
-        Texture2D tex = new Texture2D(2, 2);
-        tex.LoadImage(fileData);
+        // Load image from the file path
+        Texture2D tex = NativeGallery.LoadImageAtPath(filePath, maxSize: 1024);
+        if (tex == null)
+        {
+            Debug.LogWarning("Failed to load image at path: " + filePath);
+            yield break;
+        }
 
         // Instantiate a new RawImage object to display the screenshot
         GameObject newScreenshotDisplay = Instantiate(screenshotDisplayPrefab, gridParent);
@@ -80,18 +91,17 @@ public class ScreenshotOrganizer : MonoBehaviour
         {
             button = newScreenshotDisplay.AddComponent<Button>();
         }
-        button.onClick.AddListener(() => ShowPreview(tex, filePath));
+        button.onClick.AddListener(() => ShowPreview(tex));
 
         yield return null;
     }
 
-    public void ShowPreview(Texture2D imageTexture, string filePath)
+    public void ShowPreview(Texture2D imageTexture)
     {
         if (previewCanvas != null && previewImage != null)
         {
-            previewCanvas.gameObject.SetActive(true);
+            previewCanvas.SetActive(true);
             previewImage.texture = imageTexture;
-            currentFilePath = filePath; // Store the path of the currently previewed file
         }
     }
 
@@ -99,67 +109,7 @@ public class ScreenshotOrganizer : MonoBehaviour
     {
         if (previewCanvas != null)
         {
-            previewCanvas.gameObject.SetActive(false);
-            currentFilePath = null; // Clear the current file path
+            previewCanvas.SetActive(false);
         }
     }
-
-    public void DeleteCurrentImage()
-    {
-        if (!string.IsNullOrEmpty(currentFilePath) && File.Exists(currentFilePath))
-        {
-            File.Delete(currentFilePath); // Delete the file
-            Debug.Log("Deleted file: " + currentFilePath);
-
-            ClosePreview(); // Close the preview
-            LoadScreenshots(); // Reload the gallery
-        }
-        else
-        {
-            Debug.LogWarning("No file to delete or file does not exist.");
-        }
-    }
-    public void DeleteAllImages()
-    {
-        if (Directory.Exists(screenshotFolderPath))
-        {
-            string[] screenshotFiles = Directory.GetFiles(screenshotFolderPath, "*.png");
-
-            if (screenshotFiles.Length == 0)
-            {
-                Debug.LogWarning("No files to delete.");
-                if (statusText != null)
-                {
-                    statusText.text = "No files to delete.";
-                }
-                return;
-            }
-
-            foreach (string file in screenshotFiles)
-            {
-                File.Delete(file); // Delete the file
-                Debug.Log("Deleted file: " + file);
-            }
-
-            // After deleting all images, reload the gallery to reflect changes
-            LoadScreenshots();
-
-            if (statusText != null)
-            {
-                statusText.text = "All screenshots have been deleted.";
-            }
-
-            Debug.Log("All screenshots deleted.");
-        }
-        else
-        {
-            Debug.LogWarning("Screenshot folder does not exist.");
-            if (statusText != null)
-            {
-                statusText.text = "Screenshot folder does not exist.";
-            }
-        }
-    }
-
-
 }
