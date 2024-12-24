@@ -15,5 +15,5 @@ MonoBehaviour:
   cardType: 0
   Id: 3
   value: Seren
-  FightClip: {fileID: 7400000, guid: f959b81c610f7e04a8e5a7aed07c6045, type: 2}
+  FightClip: {fileID: 7400000, guid: dd7f992d07d588b4aad96c75bb42f94f, type: 2}
   DanceClip: {fileID: 7400000, guid: fd7db3c1565ddfb449d4d41514fb4293, type: 2}
