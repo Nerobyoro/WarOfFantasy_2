@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="Halaman_Kaelen" size="1.000000 1.419712" />
+    <ImageTarget name="Halaman_Alyssia" size="1.000000 1.420192" />
+    <ImageTarget name="Halaman_Seren" size="1.000000 1.420875" />
+    <ImageTarget name="Halaman_Tharoq" size="1.000000 1.420875" />
+    <ImageTarget name="Halaman_Cover" size="1.000000 1.420394" />
+    <ImageTarget name="boardgame" size="2.000000 1.419419" />
+  </Tracking>
+</QCARConfig>

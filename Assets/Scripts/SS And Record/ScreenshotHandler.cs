@@ -41,7 +41,7 @@ public class ScreenshotHandler : MonoBehaviour
 
         // Simpan ke galeri menggunakan NativeGallery
         string fileName = $"Screenshot_WarOfFantasy_{screenshotCounter}.png"; // Nama file dengan angka bertambah
-        NativeGallery.Permission permission = NativeGallery.SaveImageToGallery(screenshot, "MyGallery", fileName);
+        NativeGallery.Permission permission = NativeGallery.SaveImageToGallery(screenshot, "War_Of_Fantasy", fileName);
         if (permission == NativeGallery.Permission.Granted)
         {
             Debug.Log($"Screenshot berhasil disimpan di galeri dengan nama: {fileName}");

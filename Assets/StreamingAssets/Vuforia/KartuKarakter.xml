@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="Kartu_Alyssia" size="1.000000 1.378711" />
+    <ImageTarget name="Kartu_Seren" size="1.000000 1.378711" />
+    <ImageTarget name="Kartu_Tharoq" size="1.000000 1.374580" />
+    <ImageTarget name="Kartu_Kaelen" size="1.000000 1.378711" />
+    <ImageTarget name="Kartu_Kristal" size="1.000000 1.378151" />
+  </Tracking>
+</QCARConfig>
